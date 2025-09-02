@@ -9,7 +9,7 @@ plc = snap7.client.Client()
 plc.connect('192.168.0.1', 0, 1)
 
 # Azure IoT connection
-conn_str = "HostName=advitiya-iothub.azure-devices.net;DeviceId=PLC;SharedAccessKey=xECGHZm0txwaT3yJfVSbUCjlkWmVDtPMh4q/XmASP10="
+conn_str = "HostName=advitiya-iothub.azure-devices.net;DeviceId=PLC;SharedAccessKey=(owndevicestring)"
 client = IoTHubDeviceClient.create_from_connection_string(conn_str)
 
 # Correct case bit mapping
@@ -55,3 +55,4 @@ print("Listening for cloud messages...")
 
 while True:
     time.sleep(1)
+
