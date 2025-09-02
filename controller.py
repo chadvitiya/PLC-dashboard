@@ -3,7 +3,7 @@ from azure.iot.hub import IoTHubRegistryManager
 import json
 
 # Azure IoT Hub connection (service credentials)
-connection_str = "HostName=advitiya-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=fV4KGKqo7EpeHtpduYnEVsgVjvf6wZqR2AIoTEOU/R4="
+connection_str = "HostName=advitiya-iothub.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=(owndevicestring)"
 device_id = "PLC"
 registry_manager = IoTHubRegistryManager(connection_str)
 
@@ -97,3 +97,4 @@ def control():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000)
+
